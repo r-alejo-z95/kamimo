@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { createClient } from '@/lib/supabase/client'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 export default function Login() {
   const [email, setEmail] = useState('')
@@ -29,8 +30,8 @@ export default function Login() {
       if (data.user) {
         router.push('/admin')
       }
-    } catch (error: any) {
-      setError(error.message || 'Error al iniciar sesión')
+    } catch (error: unknown) {
+      setError(error instanceof Error ? error.message : 'Error al iniciar sesión')
     } finally {
       setLoading(false)
     }
@@ -103,9 +104,9 @@ export default function Login() {
           </form>
 
           <div className="mt-6 text-center">
-            <a href="/" className="text-sm text-gray-600 hover:text-primary transition-colors">
+            <Link href="/" className="text-sm text-gray-600 hover:text-primary transition-colors">
               ← Volver al inicio
-            </a>
+            </Link>
           </div>
         </div>
       </motion.div>

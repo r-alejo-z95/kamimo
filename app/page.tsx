@@ -15,7 +15,7 @@ export default function Home() {
           playsInline
           className="absolute w-full h-full object-cover"
         >
-          <source src="https://cdn.pixabay.com/video/2022/08/02/126390-736788263_large.mp4" type="video/mp4" />
+          <source src="https://cdn.pixabay.com/video/2022/08/17/128189-740906950_large.mp4" type="video/mp4" />
         </video>
         
         <div className="absolute inset-0 bg-black/50"></div>
@@ -59,7 +59,7 @@ export default function Home() {
             </Link>
             <Link
               href="/nosotros"
-              className="bg-white hover:bg-gray-100 text-dark px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105"
+              className="bg-white hover:bg-gray-100 text-black px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105"
             >
               Conocer Más
             </Link>
